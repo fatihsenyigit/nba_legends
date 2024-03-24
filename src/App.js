@@ -7,8 +7,8 @@ import './App.scss'
 function App() {
   return (
     <div className="App">
-      <CardContainer></CardContainer>
       <Header></Header>
+      <CardContainer></CardContainer>
       <PlayerCard></PlayerCard>
     </div>
   );
