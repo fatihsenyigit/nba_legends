@@ -1,8 +1,12 @@
 
+import "./_playerCard.scss";
 
-const PlayerCard = () => {
+const PlayerCard = ({name,img}) => {
     return (
-        <h1>PlayerCard</h1>
+        <div className="player-container">
+            <img src={img} alt="" />
+            <h2>{name}</h2>
+        </div>
     )
 }
 

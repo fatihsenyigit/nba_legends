@@ -9,7 +9,6 @@ function App() {
     <div className="App">
       <Header></Header>
       <CardContainer></CardContainer>
-      <PlayerCard></PlayerCard>
     </div>
   );
 }
