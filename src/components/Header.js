@@ -3,6 +3,7 @@ import { useState } from 'react'
 import logo from '../images/nba-logo.png'
 import CardContainer from './CardContainer'
 import './_header.scss'
+import { data } from "../helper/data";
  
 const Header = () => {
     const [showResult, setShowResult] = useState('')
@@ -10,12 +11,12 @@ const Header = () => {
     function search() {
         const search = document.querySelector('.header-container input').value
         if(search.trim()) {
-            setShowResult("bekleyin");
-        } else {
-            setShowResult("lutfen bos birakmayin");
-            setTimeout(() => {
-                setShowResult("");
-            }, 2100);
+           const namesArray = data.map((e)=>e.name.toLowerCase())
+            const result = namesArray.filter((e) =>
+              e.includes(search.trim().toLowerCase()),
+            ); 
+            console.log(result);
+            setShowResult(search);
         }
     } 
     return (
