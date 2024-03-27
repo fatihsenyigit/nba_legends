@@ -1,8 +1,9 @@
 import { useState } from "react";
 import "./_playerCard.scss";
+import ball from '../images/basketball-solid.svg'
 
 const PlayerCard = ({ name, img, statistics }) => {
-  const [showPic, setShowPic] = useState(false)
+  const [showPic, setShowPic] = useState(true)
  
 
   return (
@@ -15,9 +16,15 @@ const PlayerCard = ({ name, img, statistics }) => {
       ) : (
         <div className="playerDetails">
           {statistics.map((info) => {
-            return <h4>{info}</h4>;
+            return (
+              <div className="ball-point">
+                <img src={ball} alt="" />
+                <h4>{info}</h4>
+              </div>
+            );
           })}
-          <h3>{name}</h3>
+          <p>{name}</p>
+          
         </div>
       )}
     </div>
