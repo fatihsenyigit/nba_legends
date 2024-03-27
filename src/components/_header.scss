@@ -1,26 +1,20 @@
-
-@import '../sass/mixins';
+@import "../sass/mixins";
 
 .header-container {
-    @include flex-column();
-    margin: 50px auto;
-    width: 80%;
-    
-    img {
-        width: 200px;
-    }
+  @include flex-column();
+  margin: 50px auto;
+  width: 100%;
 
-    h1 {
-        text-align: center;
-    }
-    form {
-        width: 60%;
-        display: flex;
-        justify-content: center;
-        input {
-            width: 60%;
-            margin: auto;
-            padding: .3rem 1rem;
-        }
-    }
+  img {
+    width: 200px;
+  }
+
+  h1 {
+    text-align: center;
+  }
+  input {
+    width: 40%;
+    margin: auto;
+    padding: 0.3rem 1rem;
+  }
 }

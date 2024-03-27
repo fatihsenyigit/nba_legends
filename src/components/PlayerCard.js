@@ -15,9 +15,9 @@ const PlayerCard = ({ name, img, statistics }) => {
         </div>
       ) : (
         <div className="playerDetails">
-          {statistics.map((info) => {
+          {statistics.map((info,i) => {
             return (
-              <div className="ball-point">
+              <div key={i} className="ball-point">
                 <img src={ball} alt="" />
                 <h4>{info}</h4>
               </div>
