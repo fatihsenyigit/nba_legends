@@ -9,7 +9,7 @@ const CardContainer = () => {
     return (
         <div className="card-container">
             {data.map(e=>{
-               return <PlayerCard {...e}></PlayerCard>;
+               return <PlayerCard key={e.name} {...e}></PlayerCard>;
             })}
         </div>
     )

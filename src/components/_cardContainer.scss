@@ -2,7 +2,6 @@
 @import '../sass/mixins';
 
 .card-container {
-    border: 2px solid red;
     width: 80%;
     margin: 10px auto;
     @include flex-row();
