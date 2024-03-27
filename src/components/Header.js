@@ -6,6 +6,7 @@ import { data } from "../helper/data";
 
 const Header = () => {
   const [showResult, setShowResult] = useState("");
+  const [dataInput, setDataInput] = useState(data)
 
   function search() {
     const search = document.querySelector(".header-container input").value;
@@ -15,6 +16,7 @@ const Header = () => {
         e.includes(search.trim().toLowerCase()),
       );
       const newData = data.filter(info => result.includes(info.name.toLowerCase()))
+      setDataInput(newData);
       setShowResult(search);
     } else {
       const noResult = "sonuc yok";
@@ -31,7 +33,16 @@ const Header = () => {
         placeholder="Search Player ... "
       />
       <h2>{showResult}</h2>
-      <CardContainer></CardContainer>
+      <div>
+
+        <CardContainer dataInput={dataInput}></CardContainer>
+        {/* {!dataInput ? (
+          <CardContainer data={data}></CardContainer>
+        ) : (
+          <CardContainer dataInput={dataInput}></CardContainer>
+        )} */}
+      </div>
+      {/* <CardContainer></CardContainer> */}
     </div>
   );
 };
