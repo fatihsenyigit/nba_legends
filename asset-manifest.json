@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/nba_legends/static/css/main.e156f61c.css",
+    "main.js": "/nba_legends/static/js/main.28685e98.js",
+    "static/media/basketball-solid.svg": "/nba_legends/static/media/basketball-solid.f158b7e80b5657cb6a3e40e65a6da060.svg",
+    "index.html": "/nba_legends/index.html",
+    "main.e156f61c.css.map": "/nba_legends/static/css/main.e156f61c.css.map",
+    "main.28685e98.js.map": "/nba_legends/static/js/main.28685e98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e156f61c.css",
+    "static/js/main.28685e98.js"
+  ]
+}
