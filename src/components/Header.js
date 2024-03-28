@@ -5,7 +5,6 @@ import "./_header.scss";
 import { data } from "../helper/data";
 
 const Header = () => {
-  const [showResult, setShowResult] = useState("");
   const [dataInput, setDataInput] = useState(data)
 
   function search() {
@@ -17,10 +16,8 @@ const Header = () => {
       );
       const newData = data.filter(info => result.includes(info.name.toLowerCase()))
       setDataInput(newData);
-      setShowResult(search);
     } else {
-      const noResult = "sonuc yok";
-      console.log(noResult);
+      setDataInput(data);
     }
   }
   return (
@@ -32,15 +29,14 @@ const Header = () => {
         type="text"
         placeholder="Search Player ... "
       />
-      <h2>{showResult}</h2>
-      <div>
+      <div className="cards">
 
-        <CardContainer dataInput={dataInput}></CardContainer>
-        {/* {!dataInput ? (
+        {/* <CardContainer dataInput={dataInput}></CardContainer> */}
+        {!dataInput ? (
           <CardContainer data={data}></CardContainer>
         ) : (
           <CardContainer dataInput={dataInput}></CardContainer>
-        )} */}
+        )}
       </div>
       {/* <CardContainer></CardContainer> */}
     </div>
