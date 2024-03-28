@@ -5,7 +5,7 @@ import "./_header.scss";
 import { data } from "../helper/data";
 
 const Header = () => {
-  const [dataInput, setDataInput] = useState(data)
+  const [dataInput, setDataInput] = useState(data);
 
   function search() {
     const search = document.querySelector(".header-container input").value;
@@ -14,7 +14,9 @@ const Header = () => {
       const result = namesArray.filter((e) =>
         e.includes(search.trim().toLowerCase()),
       );
-      const newData = data.filter(info => result.includes(info.name.toLowerCase()))
+      const newData = data.filter((info) =>
+        result.includes(info.name.toLowerCase()),
+      );
       setDataInput(newData);
     } else {
       setDataInput(data);
@@ -30,18 +32,14 @@ const Header = () => {
         placeholder="Search Player ... "
       />
       <div className="cards">
-
-        {/* <CardContainer dataInput={dataInput}></CardContainer> */}
         {!dataInput ? (
           <CardContainer data={data}></CardContainer>
         ) : (
           <CardContainer dataInput={dataInput}></CardContainer>
         )}
       </div>
-      {/* <CardContainer></CardContainer> */}
     </div>
   );
 };
 
 export default Header;
-

@@ -4,7 +4,6 @@ import ball from '../images/basketball-solid.svg'
 
 const PlayerCard = ({ name, img, statistics }) => {
   const [showPic, setShowPic] = useState(true)
- 
 
   return (
     <div onClick={() => setShowPic(!showPic)} className="player-container">
